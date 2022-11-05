@@ -1,0 +1,46 @@
+{
+  "name": "coder-inicio-de-sesion",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "build": "babel src/index.js -d dist",
+    "nodemon": "nodemon --exec babel-node src/index.js",
+    "forever": "forever start src/index.js",
+    "pm2-fork": "pm2 start --interpreter babel-node src/index.js --name='app-balance' --watch",
+    "pm2-cluster": "pm2 start --interpreter babel-node src/index.js --name='app-balance' -i 3 --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FranBZ/coder-inicio-de-sesion.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FranBZ/coder-inicio-de-sesion/issues"
+  },
+  "homepage": "https://github.com/FranBZ/coder-inicio-de-sesion#readme",
+  "dependencies": {
+    "@faker-js/faker": "^7.6.0",
+    "bcrypt": "^5.1.0",
+    "connect-mongo": "^4.6.0",
+    "dotenv": "^16.0.3",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "mongoose": "^6.6.6",
+    "normalizr": "^3.6.2",
+    "passport": "^0.6.0",
+    "passport-local": "^1.0.0",
+    "socket.io": "^4.5.3",
+    "yargs": "^17.6.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.19.6",
+    "@babel/node": "^7.19.1",
+    "@babel/preset-env": "^7.19.4",
+    "nodemon": "^2.0.20"
+  }
+}
