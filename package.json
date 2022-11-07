@@ -6,10 +6,11 @@
   "type": "module",
   "scripts": {
     "build": "babel src/index.js -d dist",
-    "nodemon": "nodemon --exec babel-node src/index.js",
+    "nodemon-fork": "nodemon --exec babel-node src/index.js",
+    "nodemon-cluster": "nodemon --exec babel-node src/index.js CLUSTER",
     "forever": "forever start src/index.js",
-    "pm2-fork": "pm2 start --interpreter babel-node src/index.js --name='app-balance' --watch",
-    "pm2-cluster": "pm2 start --interpreter babel-node src/index.js --name='app-balance' -i 3 --watch"
+    "pm2-fork": "pm2 start src/index.js --name='app-balance' --watch",
+    "pm2-cluster": "pm2 start src/index.js --name='app-balance' -i 2 --watch"
   },
   "repository": {
     "type": "git",
