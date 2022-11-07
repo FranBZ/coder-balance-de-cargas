@@ -1,5 +1,5 @@
 {
-  "name": "coder-inicio-de-sesion",
+  "name": "coder-balance-de-cargas",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -14,15 +14,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/FranBZ/coder-inicio-de-sesion.git"
+    "url": "git+https://github.com/FranBZ/coder-balance-de-cargas.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/FranBZ/coder-inicio-de-sesion/issues"
+    "url": "https://github.com/FranBZ/coder-balance-de-cargas/issues"
   },
-  "homepage": "https://github.com/FranBZ/coder-inicio-de-sesion#readme",
+  "homepage": "https://github.com/FranBZ/coder-balance-de-cargas#readme",
   "dependencies": {
     "@faker-js/faker": "^7.6.0",
     "bcrypt": "^5.1.0",
