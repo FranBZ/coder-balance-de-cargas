@@ -48,8 +48,9 @@ carpetas separadas. No incluir los node_modules.</sup>
 - Ejecutar el comando ``` npm install ```
 - Deves configurar un archivo ``` .env ``` con los siguientes datos
     ```
-    MONGO_USER = "<usuario de mongo atlas>"
-    MONGO_PASS = "<contraseña de mongo atlas>"
+    MONGO_USER = "< usuario de mongo atlas >"
+    MONGO_PASS = "< contraseña de mongo atlas> "
+    MONGO_ATLAS_ENDPOINT = "< @cluster0.aaa111.mongodb.net/db >"
     ```
 - Una vez finalizado el punto anterior, ejecutar el comando ``` (chequear scripts disponibles en package.json) ```
 - Luego dirigite en tu navegador de preferencia a [esta ruta](http://localhost:8080/api/productos-test) 
