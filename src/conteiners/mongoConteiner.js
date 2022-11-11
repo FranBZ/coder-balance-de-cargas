@@ -1,6 +1,6 @@
 import mongoose from 'mongoose'
 import { dbsConfig } from '../config/dbsConnect.js'
-import { Chat } from '../models/chat.js'
+import { Chat } from '../models/Chat.js'
 import { normalizeData } from '../utils/denoNorma.js'
 
 /*+++++++++++++++++++++++++++++++++++++
