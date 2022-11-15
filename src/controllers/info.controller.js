@@ -8,5 +8,6 @@ export const infoController = (req, res) => {
         "Process id": process.pid,
         "Carpeta del proyecto": process.cwd()
     }
-    res.send(info)
+    res.render('info', {info})
+    //res.send(info)
 }

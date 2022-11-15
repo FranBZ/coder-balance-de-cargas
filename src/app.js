@@ -25,8 +25,9 @@ const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 
 // Configuracion
-/* const PORT = process.env.PORT || 8080*/
-app.set('port', args.puerto)
+const PORT = process.env.PORT || 8080
+app.set('port', PORT)
+//app.set('port', args.puerto)
 
 app.set('views', path.join(__dirname, 'views'))
 
