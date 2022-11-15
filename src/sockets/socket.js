@@ -1,5 +1,6 @@
 import dbChat from "./socketSelect.js"
 import { denormalizeData } from "../utils/denoNorma.js"
+import { logger } from "../config/logger.js"
 
 /*++++++++++++++++++++++++++++++++++++++
 + COMUNICACION DEL SOCKET DEL SERVIDOR +
@@ -7,7 +8,7 @@ import { denormalizeData } from "../utils/denoNorma.js"
 
 export default async (io) => {
     io.on('connection', async socket => {
-        console.log('Un usuario se ha conectado')
+        logger.info("Nuevo cliente conectado")
 
         let chatINFO = await dbChat.getAll()
         

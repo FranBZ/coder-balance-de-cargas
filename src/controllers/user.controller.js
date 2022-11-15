@@ -2,6 +2,7 @@ import { createProducts } from '../utils/createProducts.js'
 import { User } from "../models/User.js"
 import passport from "passport"
 import '../config/passport.js'
+import { logger } from '../config/logger.js'
 
 // registrando usuario
 export const signup = async (req, res) => {
@@ -10,6 +11,7 @@ export const signup = async (req, res) => {
     // Comprobando que no existen el mail
     const userFound = await User.findOne({ email: email })
     if (userFound) {
+        logger.warn(`Signup-Error`)
         return res.redirect("/api/error-registro")
     }
 
@@ -33,6 +35,7 @@ export const logout = async (req, res, next) => {
     let email = userInfo.email
     await req.logout((err) => {
         if (err) return next(err)
+        logger.info('user NO logueado')
         return res.render("saludo", { email })
     })
 }
@@ -40,8 +43,10 @@ export const logout = async (req, res, next) => {
 // comprobando autenticaicon
 export const auth = (req, res, next) => {
     if (req.isAuthenticated()) {
+        logger.info("consulta por usuario: ", req.session.passport.user)
         return next();
     } else {
+        logger.warn(`Login-Error`)
         return res.redirect('/api/login');
     }
 }
