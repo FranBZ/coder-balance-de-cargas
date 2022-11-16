@@ -1,5 +1,6 @@
 import mongoose from 'mongoose'
 import { dbsConfig } from '../config/dbsConnect.js'
+import { logger } from '../config/logger.js'
 import { Chat } from '../models/Chat.js'
 import { normalizeData } from '../utils/denoNorma.js'
 
@@ -30,7 +31,10 @@ export class MongoConteiner {
     async save(obj) {
         try {
             const { id, nombre, apellido, edad, alias, avatar } = obj.author
-            if (!id || !nombre || !apellido || !edad || !alias || !avatar || !obj.text) throw new Error(`Error al guardar, se deben ingresar todos los datos`)
+            if (!id || !nombre || !apellido || !edad || !alias || !avatar || !obj.text) {
+                logger.error('No se ingresaron todos los datos')
+                throw new Error(`Error al guardar, se deben ingresar todos los datos`)
+            } 
             const info = await this.collection.create(obj)
             return info
         } catch (error) {
