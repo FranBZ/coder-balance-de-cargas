@@ -2,8 +2,8 @@
 + DEBERAS COMENTAR Y DESCOMENTAR SEGUN ELECCION DE PERSISTENCIA +
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 
-// const PERS = 'fs'
-const PERS = 'mongodb'
+const PERS = 'fs'
+// const PERS = 'mongodb'
 // const PERS = 'firebase'
 
 /*+++++++++++++++++++++++++++++++

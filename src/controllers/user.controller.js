@@ -11,7 +11,7 @@ export const signup = async (req, res) => {
     // Comprobando que no existen el mail
     const userFound = await User.findOne({ email: email })
     if (userFound) {
-        logger.warn(`Signup-Error`)
+        logger.info(`Error al registrarse`)
         return res.redirect("/api/error-registro")
     }
 
@@ -46,7 +46,7 @@ export const auth = (req, res, next) => {
         logger.info("consulta por usuario: ", req.session.passport.user)
         return next();
     } else {
-        logger.warn(`Login-Error`)
+        logger.warn(`Error al loguearse`)
         return res.redirect('/api/login');
     }
 }

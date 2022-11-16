@@ -1,5 +1,4 @@
 import { Router } from 'express'
-import { logger } from '../config/logger.js'
 import { logout, signin, signup, auth, sessionController } from '../controllers/user.controller.js'
 
 /*+++++++++++
@@ -16,9 +15,7 @@ routerSession.get('/registro', (req, res) => res.render('registro'))
 routerSession.post('/registro', signup)
 
 // Login
-routerSession.get('/error-login', (req, res) => {
-    logger.warn('Error al loguearse, contraseña o usuario incorrecto')
-    res.render('errorLogin')})
+routerSession.get('/error-login', (req, res) =>  res.render('errorLogin'))
 routerSession.get('/login', (req, res) => res.render('login'))
 routerSession.post('/login', signin)
 

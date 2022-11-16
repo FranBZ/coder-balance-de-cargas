@@ -5,6 +5,6 @@ import compression from 'compression'
 const routerInfo = Router()
 
 // Randoms
-routerInfo.get('/info', compression(), infoController)
+routerInfo.get('/', compression(), infoController)
 
 export default routerInfo

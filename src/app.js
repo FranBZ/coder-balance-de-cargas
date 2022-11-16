@@ -10,6 +10,7 @@ import routerSession from './routes/session.routes.js'
 import routerRandoms from './routes/random.routes.js'
 import routerInfo from './routes/info.routes.js'
 import { args } from './config/yargs.js'
+import routerFail from './routes/fail.routes.js'
 
 /*+++++++++++++++++++++++++
 + CONFIGURACION DE LA APP +
@@ -47,6 +48,7 @@ app.use(express.static(path.join(__dirname, 'public')))
 // Rutas
 app.use('/api', routerSession)
 app.use('/api', routerRandoms)
-app.use('/', routerInfo)
+app.use('/info', routerInfo)
+app.use('/*', routerFail)
 
 export { app, http }
