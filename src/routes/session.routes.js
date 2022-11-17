@@ -1,6 +1,5 @@
 import { Router } from 'express'
 import { logout, signin, signup, auth, sessionController } from '../controllers/user.controller.js'
-import { error404 } from '../utils/errorRuta.js'
 
 /*+++++++++++
 + ENRUTADOR +
@@ -22,8 +21,5 @@ routerSession.post('/login', signin)
 
 // Logout
 routerSession.get('/logout', logout)
-
-// Error
-routerSession.use(error404)
 
 export default routerSession

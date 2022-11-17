@@ -49,5 +49,9 @@ app.use(express.static(path.join(__dirname, 'public')))
 app.use('/api', routerSession)
 app.use('/api', routerRandoms)
 app.use('/info', routerInfo)
+app.use((req, res) => {
+    logger.warn('Error de ruta - No encontrada')
+    res.status(404).render('errorRuta')
+})
 
 export { app, http }
