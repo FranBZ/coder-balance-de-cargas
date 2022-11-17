@@ -6,8 +6,8 @@
   "type": "module",
   "scripts": {
     "build": "babel src/index.js -d dist",
-    "nodemon-fork": "nodemon --exec babel-node src/index.js",
-    "nodemon-cluster": "nodemon --exec babel-node src/index.js CLUSTER",
+    "node": "babel-node --prof src/index.js 8080 FORK",
+    "nodemon": "nodemon --exec babel-node src/index.js",
     "forever": "forever start src/index.js",
     "pm2-fork": "pm2 start src/index.js --name='app-balance-fork' --watch",
     "pm2-cluster": "pm2 start src/index.js --name='app-balance-cluster' -i 2 --watch"

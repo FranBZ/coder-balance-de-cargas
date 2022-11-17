@@ -26,7 +26,8 @@ const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 
 // Configuracion
-const PORT = process.env.PORT || 8080
+const PORT = parseInt(process.argv[2]) || 8080
+const modoCluster = process.argv[3] == 'CLUSTER'
 app.set('port', PORT)
 //app.set('port', args.puerto)
 
@@ -54,4 +55,4 @@ app.use((req, res) => {
     res.status(404).render('errorRuta')
 })
 
-export { app, http }
+export { app, http, modoCluster }
