@@ -84,6 +84,10 @@ Considerar el siguiente criterio:
  - [Imagen de estructura de carpetas - Se puede ver errores.log y warn.log](https://github.com/FranBZ/coder-balance-de-cargas/blob/main/imagen-desafio/Captura-error-warn.PNG)
 
 #### Artillery
-- [Comparacion con y sin log - Con Log a la derecha, Sin log a la izquierda](https://github.com/FranBZ/coder-balance-de-cargas/blob/main/imagen-desafio/artillery.PNG)
+- [Comparacion con y sin log - Con log a la derecha, Sin log a la izquierda](https://github.com/FranBZ/coder-balance-de-cargas/blob/main/imagen-desafio/artillery.PNG)
 
 #### 0x
+[Comparacion con y sin log - Con log a la derecha, Sin log a la izquierda](https://github.com/FranBZ/coder-balance-de-cargas/blob/main/imagen-desafio/0x.PNG)
+
+## Conclucion
+Como conclucion puedo decir que los log son un proceso bloqueante que carga la aplicacion. No hay que hacer un mal uso de ellos, e utilizarlos de la mejor manera posible, para poder conseguir el mejor rendimiento de la app y la informacion justa para el desarrollador.
