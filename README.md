@@ -76,7 +76,8 @@ Considerar el siguiente criterio:
 ### Solucion
 
 - Compresion
-
+[Info sin compression](https://github.com/FranBZ/coder-balance-de-cargas/blob/main/imagen-desafio/sin-compression.PNG)
+[Info con compression](https://github.com/FranBZ/coder-balance-de-cargas/blob/main/imagen-desafio/con-compression.PNG)
 
 - Logger
  [Imagen de consola en el proceso](https://github.com/FranBZ/coder-balance-de-cargas/blob/main/imagen-desafio/Captura-logger.PNG)
