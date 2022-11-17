@@ -77,4 +77,7 @@ Considerar el siguiente criterio:
 
 - Compresion
 
+
 - Logger
+ [Imagen de consola en el proceso](https://github.com/FranBZ/coder-balance-de-cargas/blob/main/imagen-desafio/Captura-logger.PNG)
+ [Imagen de estructura de carpetas - Se puede ver errores.log y warn.log](https://github.com/FranBZ/coder-balance-de-cargas/blob/main/imagen-desafio/Captura-error-warn.PNG)
