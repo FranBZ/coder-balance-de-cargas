@@ -32,10 +32,10 @@ ejecutarse por línea de comandos y los argumentos que deben enviarse para levan
 instancias de servidores de modo que soporten la configuración detallada en los puntos
 anteriores.
 Ejemplo:
-● pm2 start ./miservidor.js -- --port=8080 --modo=fork
-● pm2 start ./miservidor.js -- --port=8081 --modo=cluster
-● pm2 start ./miservidor.js -- --port=8082 --modo=fork
-● ...
+- pm2 start ./miservidor.js -- --port=8080 --modo=fork
+- pm2 start ./miservidor.js -- --port=8081 --modo=cluster
+- pm2 start ./miservidor.js -- --port=8082 --modo=fork
+- ...
 
 <sup>Formato de entrega: link a un repositorio en Github con los tres proyectos en
 carpetas separadas. No incluir los node_modules.</sup>
@@ -55,3 +55,26 @@ carpetas separadas. No incluir los node_modules.</sup>
 - Una vez finalizado el punto anterior, ejecutar el comando ``` (chequear scripts disponibles en package.json) ```
 - Luego dirigite en tu navegador de preferencia a [esta ruta](http://localhost:8080/api/productos-test) 
 para testear la app
+
+# Extension desafio LOGGERS Y GZIP
+
+## Consigna
+
+Incorporar al proyecto de servidor de trabajo la compresión gzip.
+Verificar sobre la ruta /info con y sin compresión, la diferencia de cantidad de bytes devueltos en uncaso y otro.
+
+Luego implementar loggueo (con alguna librería vista en clase) que registre lo siguiente:
+- Ruta y método de todas las peticiones recibidas por el servidor (info)
+- Ruta y método de las peticiones a rutas inexistentes en el servidor (warning)
+- Errores lanzados por las apis de mensajes y productos, únicamente (error)
+
+Considerar el siguiente criterio:
+- Loggear todos los niveles a consola (info, warning y error)
+- Registrar sólo los logs de warning a un archivo llamada warn.log
+- Enviar sólo los logs de error a un archivo llamada error.log
+
+### Solucion
+
+- Compresion
+
+- Logger
